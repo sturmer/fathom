@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <%= render 'shared/menu_bar' %>
+  <h1>Themes</h1>
+
+  <% unless @user.themes.empty? %>
+    <ul>
+      <% @user.themes.each do |theme| %>
+      <li><%= theme.name%></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <div>No themes yet.</div>
+  <% end %>
+
+<!--  TODO Button to create new theme.-->
+  Create theme.
+<% end %>
+

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resource :theme
 
-  get '/themes/show' => 'themes#show', as: 'show_themes'
+  get '/themes/show' => 'themes#show', as: 'show_theme'
+  get '/themes/index' => 'themes#index', as: 'show_themes'
 end

@@ -1,7 +1,8 @@
 <% if user_signed_in? %>
   <%= render 'shared/menu_bar' %>
-  <h1>Welcome, <%= @user.email %></h1>
+  <h1>Themes</h1>
 
-  <p><%= @user.to_yaml %></p>
+<!--  Note: this should show the resources associated to one theme (compare with index)-->
+  <p><%= @user.themes.map(&:name).join(', ') %></p>
 <% end %>
 
