@@ -1,4 +1,5 @@
 <% if user_signed_in? %>
+  <%= render 'shared/menu_bar' %>
   <h1>Welcome, <%= @user.email %></h1>
 
   <p><%= @user.to_yaml %></p>
