@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <h1>Welcome, <%= @user.email %></h1>
+
+  <p><%= @user.to_yaml %></p>
+<% end %>
+
